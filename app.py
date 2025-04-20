@@ -6,6 +6,12 @@ from dotenv import load_dotenv
 
 from crew import TravelCoordinatorCrew
 
+import pysqlite3     # pysqlite3-binary에서 제공하는 모듈
+import sys
+
+# sqlite3 모듈 이름으로 접근할 때 pysqlite3를 내보내도록 강제
+sys.modules['sqlite3'] = pysqlite3
+
 load_dotenv()
 
 # Streamlit 앱 제목
